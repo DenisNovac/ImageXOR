@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="530.0" minWidth="310.0" prefHeight="530.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.gui.controllers.HelpViewController">
+   <children>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="485.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="84.0" text="Back">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="readmeArea" editable="false" prefHeight="477.0" prefWidth="310.0" text="SAFE - file, in which you want to hide another file. You can use picture or another file.  DO NOT USE EMPTY/TEXT OR LITTLE FILES. By the way, app works great with 500 bytes files.&#10;&#10;FILE - hiding file.&#10;&#10;RESULT PATH - here you can enter name for your safe with file inside. It's optional - default name is &quot;result&quot;. DO NOT SPECIFY FILE EXTENSION HERE, it's defines authomatically.&#10;&#10;You can input full paths to files or move this app to directory with your files. If &quot;Result path&quot; empty - app will create safe in app's dirrectory.&#10;&#10;SAFE LENGTH - after encoding you'll get length of original file. Remember it! This is your PASSWORD to secret file!&#10;&#10;PASSWORD - you can add extra password for your secret file, BUT YOU WILL NEED TO REMEMBER SAFE LENGTH TOO! This is optional. &#10;&#10;ENCODING AND DECODING may take lot of time for big files.&#10;&#10;Notice that this app will create extra file after encoding. This will not delete original files! This means that you need to hide/delete original file and safe to defence your files. &#10;&#10;Powered by XOR operation." wrapText="true" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <RadioButton fx:id="engButton" layoutX="205.0" layoutY="485.0" mnemonicParsing="false" selected="true" text="English">
+         <toggleGroup>
+            <ToggleGroup fx:id="cute" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="ruButton" layoutX="205.0" layoutY="508.0" mnemonicParsing="false" text="Русский" toggleGroup="$cute" />
+   </children>
+</AnchorPane>
