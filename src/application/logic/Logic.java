@@ -22,7 +22,10 @@ public class Logic {
 			InputStreamReader fileISR = new InputStreamReader(  new FileInputStream(fileS)  );
 			BufferedReader file = new BufferedReader (fileISR);*/
 
-			if (resultName==null) resultName="result";
+			if (resultName==null) {
+				int irandom = (int) (Math.random()*945);
+				resultName="result"+Integer.toString(irandom);
+			}
 			String resUrl=resultName+"."+FormatByte.getFormat(safeS); //составляем путь для файла-результата шифрования
 			//в FormatByte определяем формат сейфа, чтобы создать результат в том же формате и пользователь ничего не перепутал, дурашка
 
@@ -120,7 +123,10 @@ public class Logic {
 			}
 			String format = FormatByte.back(formatByte);
 
-			if (decodeName==null) decodeName="decode";
+			if (decodeName==null){
+				int irandom = (int) (Math.random()*945);
+				decodeName="decode"+Integer.toString(irandom);
+			}
 			String decodeUrl=decodeName+"."+format;
 
 			//теперь с этим форматом расшифровываем наш файл

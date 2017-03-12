@@ -16,7 +16,10 @@
 -fx-background-color:
 linear-gradient(to bottom, derive(-fx-base,+50%), derive(-fx-base,-40%), derive(-fx-base,-20%));
 }
- 
+
+.text-field {
+    -fx-prompt-text-fill: rgb(144,144,144);
+}
 /*******************************************************************************
  *                                                                             *
  * Push Button                                                                 *
@@ -227,10 +230,10 @@ linear-gradient(to bottom, derive(-fx-base,+50%), derive(-fx-base,-40%), derive(
 /* */
 
 
-.table-view {
+/* .table-view {
 -fx-table-cell-border-color:derive(-fx-base,+10%);
 -fx-table-header-border-color:derive(-fx-base,+20%);
-}
+}*/
  
 .split-pane:horizontal > * > .split-pane-divider {
 -fx-border-color: transparent -fx-base transparent -fx-base;

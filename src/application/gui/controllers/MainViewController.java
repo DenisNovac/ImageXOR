@@ -46,7 +46,8 @@ public class MainViewController {
 		resultPathButton.setOnAction((e)->{//выбор папки-результата
 			dirChooser.setInitialDirectory(new File("."));
 			String path = (  dirChooser.showDialog(Main.primaryStage)  ).getPath();
-			nameField.setText(path+"\\");
+			int i = (int) (Math.random()*945);
+			nameField.setText(path+"\\result"+Integer.toString(i));
 		});
 		
 		//выбор режимов работы
@@ -106,7 +107,7 @@ public class MainViewController {
 				String answer = Logic.decode(safe, length, name, password);
 				infoLabel.setText(answer);	
 			}
-			
+			nameField.setText("");
 			
 		}); //end of start button
 		
